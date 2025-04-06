@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 from joblib import dump, load
-dump(pipe, 'pipe.pkl')
+
 
 try:
     with open('pipe.pkl', 'rb') as file:
