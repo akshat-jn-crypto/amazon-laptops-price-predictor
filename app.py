@@ -3,6 +3,15 @@ import pickle
 import numpy as np
 from joblib import dump, load
 dump(pipe, 'pipe.pkl')
+
+try:
+    with open('pipe.pkl', 'rb') as file:
+        pipe = pickle.load(file)
+except Exception as e:
+    st.error("Error loading model. Please check if pipe.pkl exists and is compatible.")
+    st.stop()
+
+
 # import the model
 pipe = pickle.load(open('pipe.pkl','rb'))
 df = pickle.load(open('df.pkl','rb'))
