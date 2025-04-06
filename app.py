@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
 import numpy as np
+from joblib import dump, load
+dump(pipe, 'pipe.pkl')
 # import the model
 pipe = pickle.load(open('pipe.pkl','rb'))
 df = pickle.load(open('df.pkl','rb'))
