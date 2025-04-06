@@ -1,15 +1,7 @@
 import streamlit as st
 import pickle
+import sklearn
 import numpy as np
-from joblib import dump, load
-
-
-try:
-    with open('pipe.pkl', 'rb') as file:
-        pipe = pickle.load(file)
-except Exception as e:
-    st.error("Error loading model. Please check if pipe.pkl exists and is compatible.")
-    st.stop()
 
 
 # import the model
